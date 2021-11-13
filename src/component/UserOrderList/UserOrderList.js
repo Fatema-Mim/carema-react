@@ -31,6 +31,7 @@ const UserOrderList = () => {
                     if (data.deletedCount > 0) {
                         alert('successfullly ');
                         const remainingOrder = orders.filter(order => order._id !== id);
+                        
                         setOrders(remainingOrder);
                     }
                 });

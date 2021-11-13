@@ -11,6 +11,7 @@ import {
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AllOrderList from '../AllOrderList/AllOrderList';
 import ProductAdd from '../ProductAdd/ProductAdd';
+import ManageAllProducts from '../ManageAllProducts/ManageAllProducts';
 
 
 const AdminDashBoard = () => {
@@ -31,6 +32,7 @@ const AdminDashBoard = () => {
                         {/* <Nav.Link as={Link} to="/makeAdmin">Make Admin</Nav.Link> */}
                         <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
                         <Nav.Link as={Link} to={`${url}/productAdd`}>Add Product </Nav.Link>
+                        <Nav.Link as={Link} to={`${url}/manageAllProduct`}>All Product </Nav.Link>
                         <Button onClick={logOut} variant="warning" className="ms-3">LogOut </Button>
                         <Navbar.Text>
                             <h3>
@@ -51,6 +53,9 @@ const AdminDashBoard = () => {
                 </AdminRoute>
                 <AdminRoute path={`${path}/productAdd`}>
                     <ProductAdd></ProductAdd>
+                </AdminRoute>
+                <AdminRoute path={`${path}/manageAllProduct`}>
+                    <ManageAllProducts></ManageAllProducts>
                 </AdminRoute>
             </Switch>
         </>
