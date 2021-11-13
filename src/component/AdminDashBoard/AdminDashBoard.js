@@ -29,7 +29,6 @@ const AdminDashBoard = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to={`${url}`}>Dashboard</Nav.Link>
-                        {/* <Nav.Link as={Link} to="/makeAdmin">Make Admin</Nav.Link> */}
                         <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
                         <Nav.Link as={Link} to={`${url}/productAdd`}>Add Product </Nav.Link>
                         <Nav.Link as={Link} to={`${url}/manageAllProduct`}>All Product </Nav.Link>

@@ -16,7 +16,7 @@ const MakeAdmin = () => {
         const newAdmin = { email };
         console.log(newAdmin);
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -27,6 +27,7 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
+                    setEmail('');
                     setSuccess(true);
                     
                 }

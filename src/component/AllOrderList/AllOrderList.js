@@ -7,7 +7,7 @@ const AllOrderList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setOrders(data))
             .finally(() => setIsLoading(false));
@@ -16,7 +16,7 @@ const AllOrderList = () => {
     const handleDeletOrder = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://sleepy-anchorage-90808.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -34,7 +34,7 @@ const AllOrderList = () => {
     function handleConfirm(id) {
         const proceed = window.confirm('Are you sure, you want to Confirm?');
         if (proceed) {
-            const url = `http://localhost:5000/confirm/${id}`
+            const url = `https://sleepy-anchorage-90808.herokuapp.com/confirm/${id}`
             fetch(url, {
                 method: 'PUT',
             })

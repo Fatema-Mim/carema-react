@@ -9,7 +9,7 @@ const UserOrderList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/order')
             .then(res => res.json())
             .then(data => {
                 const findOrder = data.filter(data => data.email == user?.email);
@@ -22,7 +22,7 @@ const UserOrderList = () => {
     const handleDeletOrder = id => {
         const proceed = window.confirm('Are you sure');
         if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://sleepy-anchorage-90808.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

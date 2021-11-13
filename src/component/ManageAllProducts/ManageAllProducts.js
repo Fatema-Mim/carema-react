@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Button} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row} from 'react-bootstrap';
 import ManageAllProduct from '../ManageAllProduct/ManageAllProduct';
-import Product from '../Product/Product';
 const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/productAdd')
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/productAdd')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])

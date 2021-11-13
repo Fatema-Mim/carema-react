@@ -21,7 +21,7 @@ const Purchase = () => {
     const history = useHistory();
     const redirect_uri = '/home';
     useEffect(() => {
-        fetch('http://localhost:5000/productAdd')
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/productAdd')
             .then(res => res.json())
             .then(data => setOrderProducts(data))
             .finally(() => setIsLoading(false));
@@ -40,7 +40,7 @@ const Purchase = () => {
         const newOrder = { name, email, productName, price, address, status };
         console.log(newOrder);
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

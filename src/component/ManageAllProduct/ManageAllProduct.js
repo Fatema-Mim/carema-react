@@ -13,7 +13,7 @@ const ManageAllProduct = (props) => {
     const handleDeletOrder = id => {
         const proceed = window.confirm('Are you sure');
         if (proceed) {
-            const url = `http://localhost:5000/productAdd/${id}`;
+            const url = `https://sleepy-anchorage-90808.herokuapp.com/productAdd/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

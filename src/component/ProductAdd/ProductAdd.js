@@ -14,7 +14,7 @@ const ProductAdd = () => {
         const discription = discriptionRef.current.value;
 
         const newUser = {name,price,image,discription};
-        fetch('http://localhost:5000/productAdd',{
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/productAdd',{
             method:"POST",
             headers:{
                 'content-type' : 'application/json'
