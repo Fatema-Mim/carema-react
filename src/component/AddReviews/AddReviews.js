@@ -16,7 +16,7 @@ const AddReviews = () => {
     const history = useHistory();
     const redirect_uri = '/home';
     useEffect(() => {
-        fetch('http://localhost:5000/productAdd')
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/productAdd')
             .then(res => res.json())
             .then(data => setOrderProducts(data))
             .finally(() => setIsLoading(false));
@@ -33,7 +33,7 @@ const AddReviews = () => {
         const newReview = { name, email, review , rate};
         console.log(newReview);
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://sleepy-anchorage-90808.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
