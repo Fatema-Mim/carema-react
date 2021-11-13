@@ -45,10 +45,12 @@ const Register = () => {
                             <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                         </Form.Group>
 
-                        <Button variant="success" type="submit">
+                        <Button variant="warning"  type="submit">
                             Registration
                         </Button>
+                       <div className="mt-2">
                         <span>Already register ? Please</span> <Link to="/login">Login</Link>
+                       </div>
                     </Form>
             </Container>
 

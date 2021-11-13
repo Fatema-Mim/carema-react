@@ -31,7 +31,7 @@ const Header = () => {
                             :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>
                         }
-                        <h3>
+                        <h3 className="p-1">
                             {
                                 user?.email && user.displayName
                             }

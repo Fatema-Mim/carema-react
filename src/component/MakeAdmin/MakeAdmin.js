@@ -2,15 +2,15 @@ import React, { useRef, useState } from 'react';
 import { Container, Form, Row, Col, Button, Alert } from 'react-bootstrap';
 
 const MakeAdmin = () => {
-   const [success , setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [email, setEmail] = useState('');
 
     const emailRef = useRef();
-   
+
     const handelerAddAdmin = e => {
 
         const email = emailRef.current.value;
-        
+
 
 
         const newAdmin = { email };
@@ -29,7 +29,7 @@ const MakeAdmin = () => {
                 if (data.modifiedCount) {
                     setEmail('');
                     setSuccess(true);
-                    
+
                 }
             });
         e.preventDefault();
@@ -45,7 +45,7 @@ const MakeAdmin = () => {
                             Client Email:
                         </Form.Label>
                         <Col sm={10}>
-                            <Form.Control ref={emailRef} type="email"  />
+                            <Form.Control ref={emailRef} type="email" />
                         </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3">
@@ -56,7 +56,7 @@ const MakeAdmin = () => {
 
                     {
                         success && <Alert variant="success">
-                           Added done
+                            Added done
                         </Alert>
                     }
 

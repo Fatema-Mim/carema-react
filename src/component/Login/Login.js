@@ -28,7 +28,10 @@ const Login = () => {
     }
     return (
         <>
-        <Container>
+        <Container className="mt-4">
+                    <div className="text-center p-4">
+                        <h2>Please LogIn</h2>
+                    </div>
                 
                     <Form onSubmit={handleLoginSubmit} className="p-5">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -41,7 +44,9 @@ const Login = () => {
                             <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                         </Form.Group>
                         <Button type="submit">Login</Button>
+                        <div className="mt-2">
                         <span>New user ?</span> <Link to="/register">Register Now</Link>
+                        </div>
                     </Form>
                 
         </Container>

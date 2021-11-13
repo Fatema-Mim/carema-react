@@ -81,7 +81,7 @@ const AllOrderList = () => {
                             <td>{order.price}</td>
                             <td>{order.status}</td>
                             <td>
-                                <Button variant="warning" onClick={() => handleConfirm(order._id)}>Confirm</Button>
+                                <Button variant="warning" onClick={() => handleConfirm(order._id)}>Shipping</Button>
                             </td>
                             <td>
                                 <Button variant="danger" onClick={() => handleDeletOrder(order._id)}>Delete</Button>

@@ -13,13 +13,13 @@ const Offers = () => {
                 </h1>
                 <Row>
 
-                    <Col lg={3} >
+                    <Col lg={3} xs={12} md={6} >
                         <img src={offer1} alt="offer" />
                     </Col>
-                    <Col xs={6} lg={6}  >
+                    <Col xs={12} md={6} lg={6}  >
                         <img src={offer2} alt="offer" fluid />
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} xs={12} md={6}>
                         <img src={offer3} alt="offer" fluid/>
                     </Col>
 
