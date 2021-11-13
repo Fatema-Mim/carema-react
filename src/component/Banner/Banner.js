@@ -10,7 +10,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={b2}
+                        src={b3}
                         alt="Second slide"
                     />
 
@@ -18,7 +18,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={b3}
+                        src={b2}
                         alt="Third slide"
                     />
 
